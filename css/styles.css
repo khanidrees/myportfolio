@@ -195,6 +195,9 @@ a {
 }
 
 /* Conatact  Us*/
+#contact {
+  clear: both;
+}
 
 .contact-form {
   width: 80%;
