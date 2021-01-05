@@ -1,0 +1,245 @@
+:root {
+  --primary-color: #8aecdc;
+  --secondary-color: #49965b;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f3f3;
+  color: #333;
+  line-height: 1.6;
+}
+h1,
+h2 {
+  margin-bottom: 15px;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+/* Utility classs */
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.bg-primary {
+  color: #fff;
+  background: var(--primary-color);
+}
+.bg-secondary {
+  color: #fff;
+  background: var(--secondary-color);
+}
+.bg-light {
+  background: #fff;
+  color: #333;
+}
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn-primary,
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+.btn-secondary,
+.bg-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+/* Navbar */
+.header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  padding: 0px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.header .navbar nav ul {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .navbar nav ul li a {
+  padding: 10px 15px;
+  margin: 0 10px;
+  background: var(--secondary-color);
+  color: #fff;
+}
+.header .navbar nav ul li a:hover {
+  background: #fff;
+  color: var(--secondary-color);
+}
+/* Info section grid */
+#about {
+  display: grid;
+  height: 70vh;
+  grid-template-columns: 1fr 3fr;
+  margin-top: 70px;
+}
+#about .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#about img {
+  border-radius: 50%;
+  width: 70%;
+  margin: 50px 0 0 50px;
+}
+
+#about h1 {
+  font-size: 80px;
+  padding: 0 20px;
+  border: #333 solid 7px;
+}
+#about hr {
+  width: 10%;
+  height: 3px;
+  background: #333;
+  margin: 10px 0;
+}
+
+/* Projects Section grid*/
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#projects > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#projects .project {
+  background: #fff;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#projects .project img {
+  width: 50%;
+}
+#projects h1 {
+  font-size: 40px;
+}
+
+/* Skills Section */
+#skills h2 {
+  font-size: 40px;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+#skills .skill-lockup {
+  max-width: 700px;
+  margin: 80px auto;
+  color: #666;
+  clear: both;
+  font-weight: 300;
+}
+#skills .skill-lockup .skill-unit {
+  width: 350px;
+  float: left;
+}
+#skills .skill-lockup .skill-unit .t {
+  display: inline-block;
+  height: 3px;
+  width: 24px;
+  float: left;
+  margin-bottom: 30px;
+  background: var(--secondary-color);
+}
+#skills .skill-lockup .skill-unit .f {
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  width: 24px;
+  float: left;
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Conatact  Us*/
+
+.contact-form {
+  width: 80%;
+  clear: both;
+  margin: auto;
+}
+.contact-form .form-control {
+  width: 100%;
+  padding: 10px 0px;
+}
+.contact-form .form-control input,
+.contact-form .form-control textarea {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 5px;
+}
+.contact-form .btn {
+  width: 100%;
+}
+.contact-form .form-control input:focus,
+.contact-form .form-control textarea:focus {
+  outline-color: var(--primary-color);
+}
+.contact-form .btn:focus {
+  outline: none;
+}
+/* Footer */
+.footer {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  clear: both;
+}
+.footer a {
+  color: #fff;
+  margin: 0px 15px;
+}
+.footer a:hover {
+  color: #28a745;
+}
+.footer h4 {
+  font-weight: 400;
+  margin-top: 10px;
+}
