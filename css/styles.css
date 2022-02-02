@@ -84,6 +84,16 @@ a {
   top: 0;
   left: 0;
 }
+.header .navbar .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .navbar .logo img {
+  border-radius: 50%;
+  max-width: 50px;
+  max-height: 50px;
+}
 .header .navbar nav ul {
   max-width: 100%;
   height: 100%;
@@ -106,13 +116,18 @@ a {
   display: grid;
   height: 70vh;
   grid-template-columns: 1fr 3fr;
-  margin-top: 70px;
+  background : url(../img/74H.jpg) center center;
+	background-size: cover;
+  padding-top: 70px;
 }
 #about .info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+#about .info h2{
+  color: #fff;
 }
 
 #about img {
@@ -124,13 +139,21 @@ a {
 #about h1 {
   font-size: 80px;
   padding: 0 20px;
-  border: #333 solid 7px;
+  border: #fff solid 7px;
+  color: #fff;
 }
 #about hr {
   width: 10%;
   height: 3px;
-  background: #333;
+  background: #fff;
   margin: 10px 0;
+}
+#about p {
+  font-size: 18px;
+  border: var(--secondary-color) solid 5px;
+  background: var(--secondary-color);
+  border-radius: 25px;
+  color: #f3f3f3;
 }
 
 /* Projects Section grid*/
@@ -153,6 +176,9 @@ a {
 
 #projects .project img {
   width: 50%;
+}
+.enlargeable{
+  cursor: zoom-in;
 }
 #projects h1 {
   font-size: 40px;
@@ -194,9 +220,19 @@ a {
   background: rgba(0, 0, 0, 0.1);
 }
 
+#clear{
+  clear: both;
+}
 /* Conatact  Us*/
 #contact {
   clear: both;
+  padding: 20px 0;
+}
+#contact h2 {
+  font-size: 40px;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
 }
 
 .contact-form {

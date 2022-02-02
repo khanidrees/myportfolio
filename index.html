@@ -16,26 +16,26 @@
 <body>
   <header class="header">
     <div class="navbar">
-      <h1 class="logo">Logo</h1>
+      <h1 class="logo"><img src="/img/ik.png" alt="logo"></h1>
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/">About</a></li>
-          <li><a href="/">Projects</a></li>
-          <li><a href="/">Contact us</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#projects">Projects</a></li>
+          <li><a href="/#contact">Contact us</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <!-- About Section -->
   <section id="about" class="about">
-    <div class="image"><img src="img/headshot.jpg" alt="Headshot"></div>
+    <div class="image"><img src="img/headshot.jpeg" alt="Headshot"></div>
     <div class="info">
       <h1>Idrees Khan</h1>
       
-      <h2>Learner | Web Developer | Freelancer | B.E (Computer Science & Engineering) </h2>
+      <h2>Learner | Web Developer | Freelancer </h2>
       <hr>
-      <p>Aspiring Fullstack Web Developer | Freelancer.Looking for work like portfolio, e-commerce ,Blogging etc. Websites.</p>
+      <p><strong>Looking for work like portfolio, small Business,learning management system(lms) etc. Websites.</p></strong>
     </div>
   </section>
   <hr>
@@ -46,7 +46,7 @@
     </div>
     <div class="project">
       <h2>AlKhair Unani Pharmaceutical Pvt. Ltd.</h2>
-      <img src="img/project-1.png" alt="Project 1">
+      <img class="enlargeable" src="img/project-1.png" alt="Project 1">
     </div>
   </section>
   <hr>
@@ -74,19 +74,19 @@
 			</div>
 		</div>	
 		<div class="skill-unit">
-			<div class="skill-label">PHP</div>
+			<div class="skill-label">React</div>
 			<div class="skill-bar">
 				<span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="f"></span><span class="f"></span><span class="f"></span>
 			</div>
 		</div>
 		<div class="skill-unit">
-			<div class="skill-label">LARAVEL</div>
+			<div class="skill-label">NodeJS</div>
 			<div class="skill-bar">
 					<span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="f"></span><span class="f"></span>
 			</div>
 		</div>
 		<div class="skill-unit">
-			<div class="skill-label">MYSQL</div>
+			<div class="skill-label">mongoDB</div>
 			<div class="skill-bar">
 					<span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="f"></span><span class="f"></span><span class="f"></span><span class="f"></span><span class="f"></span>		
 			</div>
@@ -106,7 +106,7 @@
   </div><!--skill-lockup--> 
   
   </section>
-
+  <hr id="clear">
   <!-- Contact us Section -->
   <section id="contact" class="contact">
     <div>
@@ -142,4 +142,22 @@
     <h4>copyright &copy;2020</h4>
   </footer> 
 </body>
+<script>
+  document.querySelectorAll('.enlargeable').forEach(image => {
+    var elemDiv = document.createElement('div');
+    var elemImg = document.createElement("img");
+    image.addEventListener('click', event => {
+      elemImg.setAttribute("src", image.src);
+      elemImg.setAttribute("height", "100%");
+      elemImg.setAttribute("alt", "Project");
+      elemDiv.style.cssText = 'width: 100%;height:100%;position: fixed;zIndex: 10000;top: 0;left:0;cursor: zoom-out;display:flex;justify-content:center;align-items:center;';
+      elemDiv.append(elemImg)
+      document.body.appendChild(elemDiv);
+    });
+    elemDiv.addEventListener('click',function(){
+      elemDiv.parentNode.removeChild(elemDiv);
+    });
+})
+
+</script>
 </html>
