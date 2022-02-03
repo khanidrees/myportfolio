@@ -114,7 +114,7 @@ a {
 /* Info section grid */
 #about {
   display: grid;
-  height: 70vh;
+  height: 100vh;
   grid-template-columns: 1fr 3fr;
   background : url(../img/74H.jpg) center center;
 	background-size: cover;
@@ -298,11 +298,12 @@ a {
     display: none;
   }
   #about{
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  #about .image{
-    display: none;
-  }
+  
   #about .info h1{
     font-size: 40px;
   }
